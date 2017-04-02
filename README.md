@@ -11,9 +11,9 @@ In folder WPFZOO, open Command Prompt and execute PowerShell script like followi
 # Files
 - WpfZoo.ps1 : Demo program for allmost all WPF controls
 - WPFFrame*.ps1: Demo programs for WPF Frame
- - WPFWpfFrameInternal.ps1: xaml for WPF is described in script
- - WpfFrameExternalPreload.ps1: xaml for WPF is PreLoaded before display GUI from external file
- - WpfFrameExternalPostload.ps1 xaml for WPF is Loarded when button clicked from external file
+	 - WPFWpfFrameInternal.ps1: xaml for WPF is described in script
+	- WpfFrameExternalPreload.ps1: xaml for WPF is PreLoaded before display GUI from external file
+	- WpfFrameExternalPostload.ps1 xaml for WPF is Loarded when button clicked from external file
 
 # Contact
 * Name: Itsukara (Takayoshi Iitsuka)
