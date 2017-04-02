@@ -19,3 +19,32 @@ In folder WPFZOO, open Command Prompt and execute PowerShell script like followi
 * Name: Itsukara (Takayoshi Iitsuka)
 * Mail: iitt21-t@yahoo.co.jp
 * Blog: http://itsukara.hateblo.jp
+
+# Screenshots
+* WpfZoo.ps
+
+![TabItem1](https://raw.github.com/wiki/Itsukara/WpfZoo/images/01-TabItem1.PNG)
+
+![TabItem2](https://raw.github.com/wiki/Itsukara/WpfZoo/images/02-TabItem2.PNG)
+
+![DocPanel](https://raw.github.com/wiki/Itsukara/WpfZoo/images/03-DocPanel.PNG)
+
+![DocumentViewer](https://raw.github.com/wiki/Itsukara/WpfZoo/images/04-DocumentViewer.PNG)
+
+![Frames](https://raw.github.com/wiki/Itsukara/WpfZoo/images/05-Frames.PNG)
+
+![Media](https://raw.github.com/wiki/Itsukara/WpfZoo/images/06-Media.PNG)
+
+![RichTextBox](https://raw.github.com/wiki/Itsukara/WpfZoo/images/07-RichTextBox.PNG)
+
+* WpfFrame*.ps
+
+![Main Screen](https://raw.github.com/wiki/Itsukara/WpfZoo/images/10-Frame-0.PNG)
+
+![Page1](https://raw.github.com/wiki/Itsukara/WpfZoo/images/11-Frame-1.PNG)
+
+![Page2](https://raw.github.com/wiki/Itsukara/WpfZoo/images/12-Frame-2.PNG)
+
+![Page3](https://raw.github.com/wiki/Itsukara/WpfZoo/images/13-Frame-3.PNG)
+
+![Page4](https://raw.github.com/wiki/Itsukara/WpfZoo/images/14-Frame-4.PNG)
