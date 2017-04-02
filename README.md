@@ -6,7 +6,8 @@ Clone by git, or download as zip and unzip it. You can put it in any folder (her
 
 # Execute
 In folder WPFZOO, open Command Prompt and execute PowerShell script like following:
--`powershell -sta -file WpfFrameInternal.ps1`
+
+-`powershell -sta -file WpfZoo.ps1`
 
 # Files
 - WpfZoo.ps1 : Demo program for allmost all WPF controls
