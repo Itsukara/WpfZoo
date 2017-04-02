@@ -1,0 +1,21 @@
+<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="400" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="250*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <ToolBarTray>
+            <ToolBar x:Name="toolBar" VerticalAlignment="Top">
+                <Button x:Name="buttonPage1" Content="スタート"/>
+            </ToolBar>
+        </ToolBarTray>
+        <Frame x:Name="frame" Grid.Row="1"  Background="#FFEAF9F0"/>
+        <ScrollViewer x:Name="scrollView" Grid.Row="2">
+            <TextBlock x:Name="msg" Background="#FFF7E4F5" TextWrapping="Wrap"/>
+        </ScrollViewer>
+    </Grid>
+</Window>
