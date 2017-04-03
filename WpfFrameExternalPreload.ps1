@@ -1,7 +1,7 @@
 ﻿#■プログラムの説明
 #・WPFのFrameを使ったデモプログラムです。
-#・1つ画面内で、画面構成を切り替えながら、表示します。
-#・氏名などの基本情報入力後、好きなフルーツを登録するという想定です。
+#・Frameを使って、1つの画面内で画面構成を切り替えながら、表示します。
+#・氏名などの基本情報入力後、好きなフルーツを登録するウィザード風の構成です。
 #・いくつか実装例があり、本プログラムはxamlを外部からPreLoadする版です。
 #■実行方法
 #・本ファイルがあるフォルダでコマンドプロンプトを開き下記を実行
@@ -9,11 +9,11 @@
 #■画面基本操作
 #・表示された画面左上の「スタート」をクリック
 #・名前等の入力画面が出るので、入力後、「次へ」をクリック
-#・好きなフルーツの選択画面が出るので、適当に選択後、「次へ」をクリック
+#・好きなフルーツの選択画面が出るので、選択後、「次へ」をクリック
 #・登録情報確認画面が出るので、「上記内容を確認しました」をチェックし、「登録」をクリック
-#・登録完了画面が出る（単に表示されるだけで、登録処理等は行っていません）
+#・登録完了画面が表示される（単に表示されるだけで、登録処理等は行っていません）
 #・この後、更に「スタート」をクリックすると、次の登録画面になる
-#■色々な操作
+#■補足情報
 #・登録した情報の履歴が、画面下のピンクの欄に表示される（この欄はスクロール可能）
 #・画面左上の「←」と「→」によって、画面を戻ったり、進めたりできる
 #　・この際に、既に入力した情報は保存される
@@ -22,8 +22,9 @@
 #　チェックされるまで、登録完了画面に進めない
 #■バージョン等
 #・プログラム名：WpfFrameInternal.ps1
-#・バージョン　：V1.0
+#・バージョン　：V1.0.1
 #・作成日　　　：2017/04/02
+#・最終更新日　：2017/04/04
 #・作成者　　　：Itsukara (Takayoshi Iitsuka)、iitt21-t@yahoo.co.jp、http://itsukara.hateblo.jp
 
 $ErrorActionPreference = "stop"
@@ -54,7 +55,7 @@ $page2_form = [Windows.Markup.XamlReader]::Load((New-Object System.Xml.XmlNodeRe
 $page3_form = [Windows.Markup.XamlReader]::Load((New-Object System.Xml.XmlNodeReader $page3_xaml))
 $page4_form = [Windows.Markup.XamlReader]::Load((New-Object System.Xml.XmlNodeReader $page4_xaml))
 
-# form中のNameの変数化
+# form中のName属性に対して変数を作成し、変数の値として、form中のNodeを設定
 setVaviables $xaml $form
 setVaviables $page1_xaml $page1_form
 setVaviables $page2_xaml $page2_form

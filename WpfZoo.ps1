@@ -1,8 +1,8 @@
 ﻿#■プログラムの説明
-#・WPFの各コントロールを表示するデモプログラムです。
-#・表示だけでなく、クリックしたボタンを画面の欄に表示する等の動作もあります。
+#・WPFの色々な部品(コントロール)を表示するデモプログラムです。
+#・表示だけでなくクリックしたボタンの表示(画面下部に表示)等も行います
 #　・TabItem1：ボタン、リスト、テーブル等をクリックしてみてください。
-#　・TabItem2：カレンダー、Expandertや、スライダーを試してみてください。
+#　・TabItem2：カレンダー、Expanderや、スライダーを試してみてください。
 #　・Tab for DockPanel：MenuItemや、画面左のTreeViewで項目を選択してみてください。
 #　・Tab for DocumentViewer：xpsのビューアーです、ズーム等ができます。
 #　・Frames：画面上のボタンをクリックしてFrameを表示してみてください。
@@ -14,14 +14,16 @@
 #　powershell -sta -file WpfZoo.ps1
 #■画面上の各WPFコントロールに対応するxamlの確認方法
 #・Visual StudioでWPFプロジェクトを新規作成
+# 　・参考：http://itsukara.hateblo.jp/entry/2017/03/23/002632
 #・画面下のxaml文字列の<Grid>以下の行を、下記のxamlの<Grid>以下の行で置換
 #　・これにより、本プログラムと同様の画面が表示される
 #　・ただし、下記xaml中の文字列PSScriptRootを、本スクリプトのパスで置換する必要あり
 #・画面上のWPFコントロールをクリックして選択すると、xaml中で対応する部分が選択される
 #■バージョン等
 #・プログラム名：WpfZoo.ps1
-#・バージョン　：V1.0
+#・バージョン　：V1.0.1
 #・作成日　　　：2017/04/02
+#・最終更新日　：2017/04/04
 #・作成者　　　：Itsukara (Takayoshi Iitsuka)、iitt21-t@yahoo.co.jp、http://itsukara.hateblo.jp
 
 $ErrorActionPreference = "stop"
@@ -31,7 +33,7 @@ $xamlString = @'
 <Window 
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="WPF ZOO by presented by Itsukara" Height="467" Width="719">
+        Title="WPF ZOO presented by Itsukara" Height="467" Width="719">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="300"/>
@@ -216,7 +218,13 @@ $xamlString = @'
                             <Button x:Name="buttonTB00" Content="ButtonTB00"/>
                             <Button x:Name="buttonTB01" Content="ButtonTB01"/>
                             <Button x:Name="buttonTB02" Content="ButtonTB02"/>
-                            <ComboBox x:Name="comboBox1" Width="120"/>
+                            <ComboBox x:Name="comboBox1" Width="120">
+                                <ComboBoxItem Content="ComboBoxItem11"/>
+                                <ComboBoxItem Content="ComboBoxItem12"/>
+                                <ComboBoxItem Content="ComboBoxItem13"/>
+                                <ComboBoxItem Content="ComboBoxItem14"/>
+                                <ComboBoxItem Content="ComboBoxItem15"/>
+                            </ComboBox>
                         </ToolBar>
                         <ToolBar x:Name="toolBar1" HorizontalAlignment="Left">
                             <Button x:Name="buttonTB10" Content="ButtonTB10"/>
@@ -293,8 +301,8 @@ $xamlString = @'
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
 
-                    <ToolBarTray HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="685" Margin="10,0,0,0">
-                        <ToolBar x:Name="toolBarA" HorizontalAlignment="Left" Margin="0,0,-51,-22" VerticalAlignment="Top" Background="#FFA8CFFB">
+                    <ToolBarTray VerticalAlignment="Top" Margin="10,0,0,0" Height="35">
+                        <ToolBar x:Name="toolBarA" Header="文字属性" Background="#FFA8CFFB" HorizontalAlignment="Left">
                             <Button x:Name="buttonToggleBold" Content="太字" Background="White" />
                             <Button x:Name="buttonToggleItalic" Content="斜体" Background="White" />
                             <Button x:Name="buttonToggleUnderline" Content="下線" Background="White" />
@@ -303,7 +311,7 @@ $xamlString = @'
                             <Button x:Name="buttonToggleSubscript" Content="下付き" Background="White" />
                             <Button x:Name="buttonToggleSuperscript" Content="上付き" Background="White" />
                         </ToolBar>
-                        <ToolBar x:Name="toolBarB" HorizontalAlignment="Left" Margin="47,0,-98,-22" VerticalAlignment="Top" Background="#FFA8CFFB">
+                        <ToolBar x:Name="toolBarB" HorizontalAlignment="Left" Header="文節属性" Background="#FFA8CFFB">
                             <Button x:Name="buttonToggleBullets" Content=" ・ " Background="White" />
                             <Button x:Name="buttonToggleNumbering" Content="1,2,…" Background="White" />
                             <Button x:Name="buttonAlignLeft" Content="左揃え" Background="White" />
@@ -380,7 +388,7 @@ Function println($line) {
     $scrollView.ScrollToBottom() 
 }
 
-# Function to add Click callback to all button
+# Function to add Click callback
 Function button_add_Click($button) {
     $btn = $form.FindName($button.Name)
     if ($btn.add_Click -ne $null) {
