@@ -11,10 +11,11 @@ In folder WPFZOO, open Command Prompt and execute PowerShell script like followi
 
 # Files
 - WpfZoo.ps1 : Demo program for allmost all WPF controls
-- WPFFrame*.ps1: Demo programs for WPF Frame
+- WPFFrame\*.ps1: Demo programs for WPF Frame
 	 - WPFWpfFrameInternal.ps1: xaml for WPF is described in script
 	- WpfFrameExternalPreload.ps1: xaml for WPF is PreLoaded before display GUI from external file
 	- WpfFrameExternalPostload.ps1 xaml for WPF is Loarded when button clicked from external file
+- WpfPocketCalc.ps: Pocket Calculater (Integer only)
 
 # Contact
 * Name: Itsukara (Takayoshi Iitsuka)
@@ -38,7 +39,7 @@ In folder WPFZOO, open Command Prompt and execute PowerShell script like followi
 
 ![RichTextBox](https://raw.github.com/wiki/Itsukara/WpfZoo/images/07-RichTextBox.PNG)
 
-* WpfFrame*.ps
+* WpfFrame\*.ps
 
 ![Main Screen](https://raw.github.com/wiki/Itsukara/WpfZoo/images/10-Frame-0.PNG)
 
@@ -49,3 +50,7 @@ In folder WPFZOO, open Command Prompt and execute PowerShell script like followi
 ![Page3](https://raw.github.com/wiki/Itsukara/WpfZoo/images/13-Frame-3.PNG)
 
 ![Page4](https://raw.github.com/wiki/Itsukara/WpfZoo/images/14-Frame-4.PNG)
+
+* WpfPocketCalc.ps
+
+![PocketCalc](https://raw.github.com/wiki/Itsukara/WpfZoo/images/21-PocketCalc.PNG)
