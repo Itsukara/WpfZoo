@@ -32,7 +32,7 @@ Function setVaviables ($xaml, $form) {
 <Window 
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="WPF Pocket Calc presented by Itsukara" Height="300" Width="300">
+        Title="WPF Pocket Calc presented by Itsukara" Height="300" Width="300" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
