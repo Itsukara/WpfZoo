@@ -1,3 +1,6 @@
+# 関連記事
+* http://itsukara.hateblo.jp/archive/category/PowerShell
+
 # Content
 Display almost all WPF controls by PowerShell for demonstration of WPF controls.
 
